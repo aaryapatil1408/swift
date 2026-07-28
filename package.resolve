@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "pins": [
+    {
+      "identity": "alamofire",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/Alamofire/Alamofire.git",
+      "state": {
+        "revision": "6c4d6c8f5c5d8f0c1f8b1a4f1f0c123456789abc",
+        "version": "5.6.4"
+      }
+    },
+    {
+      "identity": "swiftlint",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/realm/SwiftLint.git",
+      "state": {
+        "revision": "1234567890abcdef1234567890abcdef12345678",
+        "version": "0.50.3"
+      }
+    }
+  ]
+}
