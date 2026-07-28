@@ -8,10 +8,7 @@ let package = Package(
         .macOS(.v12)
     ],
     dependencies: [
-        .package(
-            url: "https://github.com/gonzalezreal/swift-markdown-ui",
-            exact: "2.4.2"
-        )
+        .package(url: "https://github.com/gonzalezreal/swift-markdown-ui",exact: "2.4.2")
     ],
     targets: [
         .target(
