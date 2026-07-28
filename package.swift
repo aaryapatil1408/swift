@@ -1,4 +1,5 @@
 // swift-tools-version: 5.9
+
 import PackageDescription
 
 let package = Package(
@@ -7,8 +8,17 @@ let package = Package(
         .iOS(.v15),
         .macOS(.v12)
     ],
+    products: [
+        .library(
+            name: "MyApp",
+            targets: ["MyApp"]
+        )
+    ],
     dependencies: [
-        .package(url: "https://github.com/gonzalezreal/swift-markdown-ui",exact: "2.4.2")
+        .package(
+            url: "https://github.com/gonzalezreal/swift-markdown-ui",
+            exact: "2.4.2"
+        )
     ],
     targets: [
         .target(
@@ -19,6 +29,10 @@ let package = Package(
                     package: "swift-markdown-ui"
                 )
             ]
+        ),
+        .testTarget(
+            name: "MyAppTests",
+            dependencies: ["MyApp"]
         )
     ]
 )
