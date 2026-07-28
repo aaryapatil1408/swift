@@ -1,38 +1,23 @@
-// swift-tools-version: 5.9
-
+// swift-tools-version:5.7
+ 
 import PackageDescription
-
+ 
 let package = Package(
-    name: "MyApp",
+    name: "SnykSwiftTest",
     platforms: [
-        .iOS(.v15),
+        .iOS(.v14),
         .macOS(.v12)
     ],
-    products: [
-        .library(
-            name: "MyApp",
-            targets: ["MyApp"]
-        )
-    ],
     dependencies: [
-        .package(
-            url: "https://github.com/gonzalezreal/swift-markdown-ui",
-            exact: "2.4.2"
-        )
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.6.0"),
+        .package(url: "https://github.com/realm/SwiftLint.git", from: "0.50.0")
     ],
     targets: [
         .target(
-            name: "MyApp",
+            name: "SnykSwiftTest",
             dependencies: [
-                .product(
-                    name: "MarkdownUI",
-                    package: "swift-markdown-ui"
-                )
+                "Alamofire"
             ]
-        ),
-        .testTarget(
-            name: "MyAppTests",
-            dependencies: ["MyApp"]
         )
     ]
 )
